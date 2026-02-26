@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,12 +17,47 @@ export default function Home() {
               Capture, Orgonize, and  manage your job search in one place
             </p>
             <div className="flex flex-col items-center gap-4">
-              <Button size={`lg`} className="h-12 px-8 text-lg font-medium">
-                Start for Free <ArrowRight className="ml-2"/>
-              </Button>
+              <Link href="sign-up">
+                <Button size={`lg`} className="h-12 px-8 text-lg font-medium">
+                  Start for Free <ArrowRight className="ml-2"/>
+                </Button>
+              </Link>
               <p className="text-sm text-muted-foreground">
                 Free forever. No credit card required.
               </p>
+            </div>
+          </div>
+        </section>
+        {/* Hero images sections with Tab */}
+        <section className="border-t bg-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              {/* Tabs */}
+              <div>
+                <Button>Orgonize Application</Button>
+                <Button>Get Hired</Button>
+                <Button>Manage Boards</Button>
+              </div>
+              <div>
+                <Image 
+                  src="/hero-images/hero1.png"
+                  alt="Orgonize Application"
+                  width={1200}
+                  height={800}
+                />
+                <Image 
+                  src="/hero-images/hero2.png"
+                  alt="Orgonize Application"
+                  width={1200}
+                  height={800}
+                />
+                <Image 
+                  src="/hero-images/hero3.png"
+                  alt="Orgonize Application"
+                  width={1200}
+                  height={800}
+                />
+              </div>
             </div>
           </div>
         </section>
